@@ -1,0 +1,22 @@
+{
+  "name": "canopy",
+  "version": "1.0.0",
+  "description": "Sussing out illegal loggers",
+  "main": "canopy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayarajan3/cloudTest.git"
+  },
+  "author": "Adele Payman, Maya Rajan, Kenneth Kamanpully",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayarajan3/cloudTest/issues"
+  },
+  "homepage": "https://github.com/mayarajan3/cloudTest#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
