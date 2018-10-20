@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+while getopts p: option
+do
+case "${option}"
+in
+p) export file=${OPTARG};;
+esac
+done
+export base_str=$(cat $file | base64)
+echo "
+  {
+    'payload':
+      {
+        'image':
+          {
+            'imageBytes': '$base_str'
+          }
+
+      }
+
+  }
+
+" > request.json
+
+
