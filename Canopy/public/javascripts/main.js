@@ -4,7 +4,7 @@ function clicky () {
     encodeImageFileAsURL($('#uploadBtn')[0]);
     var file = imageData;
     $.post("/upload", file, function(data, status){
-
+        $('p').html(data);
     });
 }
 
@@ -16,3 +16,4 @@ function encodeImageFileAsURL(element) {
     }
     reader.readAsDataURL(file);
   }
+
