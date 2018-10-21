@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Canopy Project</title>
+    <title>Project Canopy</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/javascripts/main.js" type="text/javascript"></script>
     <script src="/javascripts/maps.js" type="text/javascript"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    
   </head>
+
   <body>
     <div class="header">
-      <h1 id="pageTitle">The Canopy Project</h1>
+      <h1 id="pageTitle">Project Canopy</h1>
     </div>
+
     <div class="container">
-      <p class="intro">The Earth's rainforests are under threat.<br>Rainforests are home to 50% of the world's plant and animal species and play a vital role
-        in regulating the climate.<br>They are disappearing at an alarming rate.</p>
-      <h2 class="intro introBold">In 40 years, they could be <b>gone.</b></h2>
-      <p class="intro">Illegal logging in The Amazon, The Congo and the Rainforests of South East Asia are responsible for much of this decline, where 
-        it accounts for between 61% and 72% of logging activity in these areas.
+
+      <p class="intro">The Earth's rainforests, home to about 50% of the world's plant and animal species, play a vital role
+        in regulating the climate. However, it is a well known fact that forests are decreasing every year. Deforestation is 
+        a major problem all over the world, causing drastic changes not only on the indeginous wildlife and their surrounding environments, 
+        but also on the entire world.</p>
+
+      <h2 class="intro introBold">In 40 years, rainforests could completely <b>disappear.</b></h2>
+      
+      <p class="intro">Illegal logging, which is the cutting down of trees outside of government regulation, 
+        is one of the major causes of the drastic deforestation of rainforests. In The Amazon, 
+        The Congo, and the rainforests of South East Asia, illegal logging accounts for between <b>61% and 72%</b> of all logging in the region.
+        <br>
+        What if we could stop this from happening? Our platform is designed to help park rangers and forest managers identify small-scale
+        illegal logging operations, from a few hundered squared feet to several acres, which are often overlooked by other
+        satellite imaging platforms. We believe that by helping to detect them where and when they happen, we can make 
+        do our bit to help save the world's forests.
       </p>
+
       <h2 id="prediction"></h2>
-      <input type="file" id="uploadBtn" alt="Upload an Image"  onchange="encodeImageFileAsURL(this)">
-      <button onclick="clicky()">Click</button>
-      <p class="help">Image after here</p>
+
+      <div class = "buttonCtr">
+        <p id="fileUpload"></p>
+        <p class="help"></p>
+        <p class="instructions">Please upload an image that you would like to test</p>
+        <input  type="file" id="uploadBtn" alt="Upload an Image" class="btn filesubmit" onchange="encodeImageFileAsURL(this)">
+        <button  class="btn choosefile" onclick="clicky()">Upload</button>
+      </div>
+      <!-- class="btn filesubmit"
+      class="btn choosefile" -->
+
+
+      <br>
+
+      <div style="height: 30px;"></div>
+      
+      <div class="coords">
+        <input id="latCoord" type="number" placeholder="Latitude" onchange="">
+        <input id="longCoord" type="number" placeholder="Longitude">
+        <button onclick="clicky2()">Scan</button>
+        <div id="testtest"></div>
+      </div>
+
+      
+      
     </div>
   </body>
 
