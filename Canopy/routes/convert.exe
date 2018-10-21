@@ -1,13 +1,15 @@
 #!/bin/bash
 
-while getopts p: option
+while getopts p:d: option
 do
 case "${option}"
 in
 p) export base_str=${OPTARG};;
+d) export path=${OPTARG};;
 esac
 done
 export base_str=$(cat $file)
+requestPath="request.json"
 echo "
   {
     'payload':
@@ -21,6 +23,7 @@ echo "
 
   }
 
-" > request.json
+" > "$path/$requestPath"
+echo ("$path/$requestPath")
 
 
