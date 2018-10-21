@@ -2,10 +2,10 @@ var imageData = '';
 
 function clicky () {
     encodeImageFileAsURL($('#uploadBtn')[0]);
-    var file = imageData;
+    var file = {"image" : imageData};
     $.post("/upload", file, function(data, status){
         $('p').html(data);
-    });
+    }, "json");
 }
 
 function encodeImageFileAsURL(element) {
