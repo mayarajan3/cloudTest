@@ -17,7 +17,7 @@ function clicky () {
     }, "json");
 }
 
-function clicky2 () {
+/*function clicky2 () {
     imageArr = createImgArray($("#latCoord").val(), $("#longCoord").val(), 16, 400, apikey);
     $.post("/uploadCoords", {imageArr:imageArr}, function(data, status){
         //console.log(data);
@@ -27,7 +27,7 @@ function clicky2 () {
         //console.log(dataArray[8]);
         $('#testtest').html(dataArray[8]);
     }, "json");
-}
+}*/
 
 function encodeImageFileAsURL(element) {
     var file = element.files[0];
@@ -69,8 +69,8 @@ function createImgArray(originLat, originLong, zoom, size, key) {
     for(var i=0; i<globalGridSize; i++){
         arr[i] = new Array();
         for(var j=0; j<globalGridSize; j++){
-            var lat = originLat - i*offset;
-            var long = originLong + j*offset;
+            var lat = +originLat - i*offset;
+            var long = +originLong + j*offset;
             arr[i][j] = generateURI(lat, long, zoom, size, key);
         }
     }
@@ -78,11 +78,21 @@ function createImgArray(originLat, originLong, zoom, size, key) {
 }
 
 $(document).ready(function(e) {
-    var arr = createImgArray(2.423850, 99.314919, 16, 400, apikey);
-    for(var i=0; i<globalGridSize; i++){
-        for(var j=0; j<globalGridSize; j++){
-            $('#testtest').append("<img src=" + arr[i][j] + " style='width:200px;margin-bottom:-2px;margin-top:-2px; !important;padding;0' >");
+    $("#hello").click(function() {
+        $('#testtest').empty();
+        console.log($("#latCoord").val()+ "   "+$("#longCoord").val());
+        //var arr = createImgArray(2.423850, 99.314919, 16, 400, apikey);
+        var arr = createImgArray($("#latCoord").val(), $("#longCoord").val(), 16, 400, apikey);
+        console.log(arr);
+        for(var i=0; i<globalGridSize; i++){
+            for(var j=0; j<globalGridSize; j++){
+    
+                $('#testtest').append("<img src=" + arr[i][j] + " style='width:200px;margin-bottom:-2px;margin-top:-2px; !important;padding;0' >");
+            }
         }
-    }
+    });
 });
+
+//Test Coords
+//2.423850, 99.314919
 
