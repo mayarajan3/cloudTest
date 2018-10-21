@@ -1,8 +1,30 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.header{
+  background-image: url(https://images.unsplash.com/photo-1535025075092-5a1cf795130b?ixlib=rb-0.3.5&s=1e24e1b6d839a6bf346e75b33547ee8e&auto=format&fit=crop&w=1952&q=80);
+  background-size: cover; 
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
+}
+
+#pageTitle {
+  margin: 0;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5em;
+  color: white;
+}
+
+.container{
+  padding: 50px;
 }
