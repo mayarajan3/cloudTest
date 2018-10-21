@@ -47,9 +47,10 @@ function encodeImageFileAsURL(element) {
         var image = document.createElement("img");
         // the result image data
         image.src = e.target.result;
-        image.style = "width:400px; height:400px; border-radius:3px;text-align:center";
+        image.style = "width:400px; height:400px;margin-bottom:15px; border-radius:3px;text-align:center";
         image.class = "userImage";
-        $('.help').after(image);
+        $('.helper').empty();
+        $('.helper').append(image);
      }
      // you have to declare the file loading
      reader.readAsDataURL(file);

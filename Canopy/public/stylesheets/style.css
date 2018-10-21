@@ -40,6 +40,14 @@ h2 {
   font-size: 40px;
 }
 
+.foilage {
+  background-image: url(https://i.ytimg.com/vi/qRXFHmsVn78/maxresdefault.jpg);
+  background-size: cover; 
+  width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+}
+
 p {
   margin-top: 50px;
   text-align: center;
@@ -129,4 +137,8 @@ p {
   margin-top: 40px;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+
+.help {
+  font-weight: bold;
 }
